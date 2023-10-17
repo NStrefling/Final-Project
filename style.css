@@ -1,0 +1,83 @@
+body {
+    font-family:'Trebuchet MS';
+}
+
+nav {
+  background: linear-gradient(0.25turn,rgba(223, 166, 194, 0.997),rgba(216, 86, 149, 0.997));
+}
+
+.nav-item-list {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.nav-li {
+    list-style: none;
+    padding: 20px;
+    color: rgb(39, 37, 37);
+    font-size: 18px;
+}
+
+.nav-li:hover {
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+    color: white;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-img {
+    width: 800px;
+    height: auto;
+    position: absolute;
+    border-radius: 25px;
+    filter: brightness(80%);
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    top: 75px;
+}
+
+.intro {
+    margin-top: 500px;
+}
+
+.random-generator-container {
+    background-color: rgb(246, 171, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5rem outset pink;
+    outline: 0.5rem solid rgb(226, 213, 184);
+    box-shadow: 0 0 0 2rem rgba(216, 86, 149, 0.997);
+    border-radius: 12px;
+    font: bold 1rem sans-serif;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+    color: whitesmoke;
+}
+
+#project-generator-btn {
+   padding: 15px 50px;
+   border: none;
+   border-radius: 12px;
+   color: white;
+   background-color:rgba(216, 86, 149, 0.997);
+}
+
+#project-generator-btn:hover {
+    scale: 1.1;
+    background-color: rgba(218, 44, 128, 0.997);
+}
+
+#style-project-container {
+   list-style: none;
+}
