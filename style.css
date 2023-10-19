@@ -8,7 +8,7 @@ body {
 
 nav {
   background: linear-gradient(0.25turn,rgba(223, 166, 194, 0.997),rgba(216, 86, 149, 0.997));
-  width: 100%;
+  width: 100vw;
 }
 
 .nav-item-list {
