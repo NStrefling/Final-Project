@@ -8,60 +8,84 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-  <nav>
-    <ul class="nav-item-list">
-      <li class="nav-li">Welcome</li>
-      <li class="nav-li">Project Generator</li>
-      <li class="nav-li">About</li>
-      <li class="nav-li">Contact</li>
-    </ul> 
-  </nav>
+    <nav>
+        <ul class="nav-item-list">
+            <li class="nav-li">Welcome</li>
+            <li class="nav-li" id="project-generator-btn"><a id="gen-link" href="#jump-here">Project Generator</a></li>
+            <li class="nav-li" id="contact">Contact</li>
+        </ul>
+    </nav>
+
+ <!-- create a pop up modal for contact  -->
+
+    <section class="box">
+        <div class="close">&times;</div>
+        <div class="registration-box">
+        <div>
+            <input type="email" class="email" required="required">
+             <label for="email">Email</label>
+        </div>
+        <div>
+            <input type="text" class="first-name" required="required">
+            <label for="first-name">First Name</label>
+        </div>
+        <div>
+            <input type="text" class="last-name" required="required">
+            <label for="last-name">Last Name</label>
+        </div>
+        <button class="submit-btn">Submit</button>
+        </div>
+      </section>
+
+
   <div class="welcome">
-    <h1>Welcome Fiber Artists</h1>
+    <h1 class="welcome-statement">Welcome Fiber Artists...</h1>
     <img src="/Images/crochet-hero-image.jpg" alt="hero" class="welcome-img">
   </div>
   <div class="intro">
-    <h3>No pattern, no problem</h3>
+    <h3>No pattern, no problem.</h3>
     <p>Crocheting freehand can be an exciting, yet frustrating process, especially for those wanting to design and sell their own patterns. Sometimes the creative block can begin before you even start your project. You have to decide what to make, the colors, the style, everything down to the very last stitch. This page is designed to help you get started on your next project and help work through creative blocks!</p>
   </div>
 
 
-  <div class="random-generator-container">
+  <div class="random-generator-container" id="jump-here">
     <div class="random-generator-content">
-      <h3>Click the button to generate a random project!</h3>
+      <h3>Click the buttons to generate a random project!</h3>
       <ul id="style-project-container">
-        <li id="style">style</li>
-        <li id="project">project</li>
+        <li id="style">Style</li>
+        <button id="style-btn">Random Style</button>
+        <li id="project">Project</li>
+        <button id="project-btn">Random Project</button>
       </ul>
-      <button id="project-generator-btn">Click me</button>
     </div>
   </div>
 
 
   <div class="tips-n-tricks">
-    <ul class="list">Here are some tips and tricks to starting your project!
-      <li class="list-item">Choose your yarn. 
-        <p> If you are making a festive item, choose the appropriate colors to match the occasion. Make sure to select the appropriate yarn weight, using fine weight yarn to make a potholder may not be the best idea...</p>
+    <h3>Here are some tips and tricks to starting your project!</h3>
+    <ul class="tips-list">
+      <li class="tips">Choose your yarn. 
+        <p class="tips-description"> If you are making a festive item, choose the appropriate colors to match the occasion. Make sure to select the appropriate yarn weight, using fine weight yarn to make a potholder may not be the best idea...</p>
       </li>
-      <li class="list-item">Gather the proper tools
-        <p>Okay, so you've got your yarn, now you need a crochet hook (There is always a size recommendation listed on the back of the skein of yarn), scissors, and a darning needle (for sewing and weaving ends).</p>
+      <li class="tips">Gather the proper tools
+        <p class="tips-description">Okay, so you've got your yarn, now you need a crochet hook (There is always a size recommendation listed on the back of the skein of yarn), scissors, and a darning needle (for sewing and weaving ends).</p>
        </li>
-      <li class="list-item">Additional Materials
-        <p>Depending on your project, there are some additional items that could be needed such as fiber fill, safety eyes, buttons, or stitch markers.
+      <li class="tips">Additional Materials
+        <p class="tips-description">Depending on your project, there are some additional items that could be needed such as fiber fill, safety eyes, buttons, or stitch markers.
         </p>
       </li>
-      <li class="list-item">Do your research
-        <p>When crocheting without a pattern, it can be easy to get lost in your stitches. Make sure to look up any foreign stitches or techniques to help prevent mistakes.</p>
+      <li class="tips">Do your research
+        <p class="tips-description">When crocheting without a pattern, it can be easy to get lost in your stitches. Make sure to look up any foreign stitches or techniques to help prevent mistakes.</p>
       </li>
-      <li class="list-item">It's Okay to Unravel
-        <p>Mistakes happen, and good craftsmanship takes time and patience. If a mistake is noticable and messes up the rest of your work, it is okay to go back and fix it.</p>
+      <li class="tips">It's Okay to Unravel
+        <p class="tips-description">Mistakes happen, and good craftsmanship takes time and patience. If a mistake is noticeable and messes up the rest of your work, it is okay to go back and fix it.</p>
       </li>
-      <li class="list-item">Write Everything Down</li>
-        <p>If you are crocheting freehand, it is crucial that you write down everything you do. Write down how many stitches are in each row, which stitches you're using, </p>
+      <li class="tips">Write Everything Down</li>
+        <p class="tips-description">If you are crocheting freehand, it is crucial that you write down everything you do. Write down how many stitches are in each row, which stitches you're using, and any other information about your project.</p>
     </ul>
   </div>
   <footer>
-    <p>Want more like this? Check out my <a href="#">Instagram</a> and <a href="#">Etsy</a>!</p>
+    <p>Want more like this? Check out my <a href="https://www.instagram.com/crimson_rose_crafts/" id="instagram" target="_blank">Instagram</a> and <a href="https://www.etsy.com/shop/crimsonrosebynatalie/?etsrc=sdt" id="etsy" target="_blank">Etsy</a>!</p>
   </footer>
 </body>
 </html>

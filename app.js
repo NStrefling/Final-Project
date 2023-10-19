@@ -3,20 +3,59 @@
 const styleType = ['Boho', 'Minimalist', 'Gothic', 'Festive', 'Abstract', 'Summer', 'Fall', 'Winter', 'Spring', 'Punk', 'Hippie', 'Cottagecore', 'Rainbow', 'Spooky', 'Grayscale', 'Tiny'];
 const projectType = ['Beanie', 'Bucket Hat', 'Sweater', 'Cardigan', 'Blanket', 'Pet Toy', 'Coaster', 'Tapestry', 'Table Runner', 'Headband', 'Bandana', 'Bookmark', 'Shawl', 'Cup Coozie', 'Pot Holder', 'Market Bag', 'Coin Purse', 'Tote Bag', 'Shorts', 'Halter Top', 'Hand Warmers', 'Scarf', 'Keychain', 'Car Decor', 'Flowers', 'Amigurumi', 'Pillow', 'Garland', 'Book Cover', 'Basket', 'Jewelry', 'Doily', 'Skirt', 'Dress', 'Overalls', 'Socks', 'Pants', 'Shirt'];
 
-//create a function that will display a random item from the style and project array
+//pull elements from html
 
-function randomStyleType() {
-    return styleType[Math.floor(Math.random()*styleType.length)];
+let btnStyle = document.getElementById('style-btn');
+let resultStyle = document.getElementById('style');
+let btnProject = document.getElementById('project-btn');
+let resultProject = document.getElementById('project');
+
+//create a function to randomize style and project
+
+function getRandomStyle(min, max) {
+    let step1style = max - min + 1;
+    let step2style = Math.random() * step1style;
+    let result1 = Math.floor(step2style) + min;
+
+    return result1;
 }
 
-function randomProjectType(projectType) {
-    return projectType[Math.floor(Math.random()*projectType.length)];
+btnStyle.addEventListener('click', () => {
+    let indexStyle = getRandomStyle(0, styleType.length-1);
+    resultStyle.innerText = styleType[indexStyle];
+})
+
+function getRandomProject(min, max) {
+    let step1project = max - min + 1;
+    let step2project = Math.random() * step1project;
+    let result2 = Math.floor(step2project) + min;
+
+    return result2;
 }
 
-//now link the function to html in the project generator container
+btnProject.addEventListener('click', () => {
+    let indexProject = getRandomProject(0, projectType.length-1);
+    resultProject.innerText = projectType[indexProject];
+})
 
-let styleTypeLi = document.getElementById('style').innerHTML = randomStyleType(styleType);
-let projectTypeLi = document.getElementById('project').innerHTML = randomProjectType(projectType);
+//form open/close
 
-//add event listener to the button to randomly generate projects!
+let btnOpen = document.getElementById('contact');
+let box = document.querySelector('.box');
+let body = document.querySelector('body');
+let close = document.querySelector('.close');
+
+btnOpen.addEventListener('click', () => {
+    btnOpen.style.display='none';
+    box.style.display='block';
+});
+
+close.addEventListener('click', () => {
+    btnOpen.style.display='block';
+    box.style.display='none';
+})
+
+
+
+
 
